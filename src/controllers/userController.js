@@ -1,6 +1,6 @@
 import { userService } from '../services/userService.js';
 
-export const userController = {
+const userController = {
   async getAll(req, res) {
     const users = await userService.getAll();
     res.json(users);
@@ -23,3 +23,5 @@ export const userController = {
     res.status(204).end();
   }
 };
+
+export default userController;
